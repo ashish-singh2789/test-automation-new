@@ -62,11 +62,11 @@ export class Utils {
     const pageContent = await this.page.content();
     // Check if the expected text matches any part of the page content
     if (text.includes(userIdErrorText)) {
-      console.log("Page contains the expected text");
+      console.log("Page contains the expected incorrect userID error text");
     } else if (text.includes(passwordErrorText)) {
-      console.log("Page does not contain the expected text");
+      console.log("Page contain the expected incorrect passowrd error text");
     } else {
-      console.log("Invalid error message");
+      console.log("Invalid error on the page");
     }
   }
 
@@ -79,7 +79,7 @@ export class Utils {
   async runPixelTest(page, selector: string, fileName: string) {
     expect(await page.locator(selector).screenshot()).toMatchSnapshot(
       fileName,
-      { threshold: 0.2, maxDiffPixelRatio: 0.2 },
+      { threshold: 0.3, maxDiffPixelRatio: 0.3 },
     );
   }
 

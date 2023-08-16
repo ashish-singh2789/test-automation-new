@@ -11,14 +11,6 @@ const incorrectUserName = "incorrectUser";
 const incorrectPassword = "incorrectPassword";
 const userIdErrorText = "Your username is invalid!";
 const passwordErrorText = "Your password is invalid!";
-const baseLogoFileName = "logo.png";
-const baseLogoImageFilePath = path.resolve(
-  process.cwd(),
-  "test",
-  "specs",
-  "login.spec.ts-snapshots",
-  "logo.png",
-);
 const timeout = 2000;
 
 export {
@@ -32,6 +24,4 @@ export {
   timeout,
   userIdErrorText,
   passwordErrorText,
-  baseLogoFileName,
-  baseLogoImageFilePath,
 };

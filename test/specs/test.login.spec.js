@@ -10,8 +10,6 @@ import {
   passwordErrorText,
   incorrectUserName,
   incorrectPassword,
-  baseLogoImageFilePath,
-  baseLogoFileName,
 } from "../config/constants.js";
 import { Utils } from "../utils/utilities.js";
 import locators from "../config/locators.js";
@@ -50,12 +48,9 @@ test.describe("Test login : ", () => {
     await utils.verifyTextwithStrings(passwordErrorText);
   });
 
-  test("Verify company logo : ", async ({ page }) => {
+  test("Validate company logo : ", async ({ page }) => {
     const utils = new Utils(page);
-    // Login to the webpage
-    await utils.login(userId, password);
     // Compare logo image
-    await utils.runPixelTest(page, locators.LOGO, baseLogoFileName);
-    await utils.logout();
+    await utils.runPixelTest(page, `${locators.LOGO}`, "logo.png");
   });
 });

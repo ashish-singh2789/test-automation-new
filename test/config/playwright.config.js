@@ -8,7 +8,7 @@ export default defineConfig({
   reportSlowTests: { max: 0, threshold: 240000 },
   timeout: 30000,
   maxFailures: 2,
-  workers: 4,
+  workers: 2,
   use: {
     headless: true,
     viewport: { width: 1200, height: 800 },

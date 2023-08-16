@@ -1,3 +1,3 @@
 export default {
-  LOGO: '//img[contains(@alt,"Practice")]',
+  LOGO: '//img[contains(@alt,"Practice Test Automation")]',
 };
